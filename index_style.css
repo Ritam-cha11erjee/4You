@@ -22,7 +22,7 @@ body {
 .sidebarOpener{
     display: none;
 }
-.sidebar {
+.sidebarVisible {
     width: 20%;
     background-color: var(--lightColor);
     height: 100%;
@@ -37,22 +37,22 @@ body {
     z-index: 15;
 }
 
-.sidebar h1 {
+.sidebarVisible h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
-.sidebar ul {
+.sidebarVisible ul {
     list-style: none;
     padding: 0;
     margin-top: -10px;
     height: 25%;
 }
-.sidebar ul li {
+.sidebarVisible ul li {
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
-.sidebar ul li a {
+.sidebarVisible ul li a {
     color: var(--darkColor);
     text-decoration: none;
     font-size: 18px;
@@ -62,7 +62,7 @@ body {
 
 
 }
-.sidebar ul li a:hover{
+.sidebarVisible ul li a:hover{
     font-size: 20px;
     color: black;
     transition: color 0.2s, font-size 0.2s;
@@ -75,7 +75,7 @@ body {
     background-color: var(--darkColor);
     border-radius: 10rem;
 }
-.sidebar .user-info {
+.sidebarVisible .user-info {
     background-color: white;
     padding: 0px;
     border-radius: 10px;
@@ -166,18 +166,18 @@ body {
     background-color: rgb(0, 52, 61);
 }
 
-.sidebar .user-info img {
+.sidebarVisible .user-info img {
     border-radius: 50%;
     width: 70px;
     height: 70px;
 }
-.sidebar .user-info p {
+.sidebarVisible .user-info p {
     margin: 0px 0;
     color: white;
     font-weight: 600;
     font-size: 19px;
 }
-.sidebar .user-info .premium {
+.sidebarVisible .user-info .premium {
     background-color: #ff4081;
     color: white;
     padding: 5px;
