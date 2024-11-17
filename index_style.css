@@ -681,7 +681,7 @@ body {
 
 .sidebarOpener{
     display: block;
-    position: absolute;
+    position: fixed;
     top: 8%;
     font-size: 6vw;
     left: 0;
@@ -726,30 +726,9 @@ body {
     display: block;
     /* animation: openSidebar 0.5s ;
     animation-timing-function: ease;*/
+    transform: translateX(-60vw);
     transition: transform 0.5s ease; 
     
-}
-.sidebarHidden{
-    animation: closeSidebar 0.5s;
-
-}
-@keyframes openSidebar {
-    from{
-        transform: translateX(-60%);
-    }
-    to{
-        transform: translateX(0%);
-
-    }
-}
-
-@keyframes closeSidebar {
-    from{
-        width: 60;
-    }
-    to{
-        width: 0%;
-    }
 }
 
 .sidebarVisible h1 {
@@ -834,7 +813,7 @@ body {
     border: 1px solid gold;
     border-radius: 3vw;
     box-shadow: -2px 2px 5px rgba(7, 63, 88, 0.253);
-    padding: 10px 10px;
+    padding: 5% 5%;
 }
 #premiumHeading{
     font-weight: 600;
@@ -878,7 +857,8 @@ body {
     font-size: 3vw;
     padding: 2% 4%;
     float: right;
-    margin-right: -8%;
+    margin-right: -5%;
+    right:0;
     margin-top: 5%;
     cursor: pointer;
     transition: transform 0.15s, background-color 0.15s;
@@ -1032,11 +1012,11 @@ body {
 
 #prev{
     position: absolute;
-    top: 6.2%;
+    top: 4%;
     text-align: center;
     background-color: black;
     z-index: 10;
-    padding: 13.5% 1%;
+    padding: 15.2% 1%;
     padding-right: 1.5%;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, white 0%, rgba(215,244,252,0) 100%);
@@ -1049,11 +1029,11 @@ body {
     font-weight: 700;
     color: rgb(0, 62, 104);
     position: absolute;
-    top: 6.2%;
+    top: 4%;
     text-align: center;
     background-color: black;
     z-index: 10;
-    padding: 13.5% 1%;
+    padding: 15.2% 1%;
     padding-left: 1.5%;
     background: rgb(255,255,255);
     background: linear-gradient(-90deg, white 0%, rgba(215,244,252,0) 100%);
