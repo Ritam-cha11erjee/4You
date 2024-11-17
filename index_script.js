@@ -1,5 +1,5 @@
  let slideshow = document.querySelector(".slideshow");
- let element = document.getElementsByClassName("SSimage");
+ let element = document.querySelectorAll(".SSimage");
  let prev = document.getElementById("prev");
  let next = document.getElementById("next");
 let counter = 0;
@@ -28,6 +28,7 @@ function initiateSlideshow(){
     else
     counter ++;
     slideshow.style.transform = `translateX(-${counter*25}%)`
+    
  }
 
  function goPrev(){
