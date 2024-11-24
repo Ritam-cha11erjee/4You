@@ -3,6 +3,7 @@
   <title>
    Services
   </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +13,6 @@
     @media screen and (min-width: 1280px){
    body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #ffffff;
             --primaryColor: #63DDFF;
             --lightColor: #D7F4FC;
@@ -23,6 +22,11 @@
             font-optical-sizing: auto;
             font-weight: 500;
             font-style: normal;
+
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
         
 
@@ -206,7 +210,8 @@
         }
         .service-card {
             background-color: var(--primaryColor);
-            border-radius: 10px;
+            /* border-radius: 10px; */
+            border-radius: 5% / 5%;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 20%;
             aspect-ratio: 1/0.8;
@@ -225,7 +230,8 @@
         .service-card img {
             width: 100%;
             aspect-ratio: 1/0.6;
-            border-radius: 10px 10px 12% 0%;
+            border-radius: 5% 5% 12% 0%;
+            border-bottom-right-radius: 15% 18%;
         }
         .service-card .service-name {
             color: white;
@@ -251,8 +257,6 @@
 
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #ffffff;
             --primaryColor: #63DDFF;
             --lightColor: #D7F4FC;
@@ -262,6 +266,11 @@
             font-optical-sizing: auto;
             font-weight: 500;
             font-style: normal;
+
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
         
 
@@ -388,19 +397,22 @@
         .search-bar {
             display: flex;
             justify-content: flex-end;
-            padding: 10px 20px;
+            padding: 5px 10px;
             position: fixed;
-            top: 11vw;
+            top: 10.5vw;
             right: 0;
             z-index: 5;
+            
         }
         .search-bar input[type="text"] {
-            padding: 5px;
+            width: 50%;
+            padding: 2px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
         .search-bar input[type="submit"] {
-            padding: 5px 10px;
+            padding: 5px 7px;
+            font-size: 0.5rem;
             border: none;
             background-color: var(--darkColor);
             color: white;
@@ -430,7 +442,7 @@
             
         }
         .content h1 {
-            font-size: 230%;
+            font-size: 100%;
             color: #333;
             display: block;
             font-weight: 700;
@@ -450,7 +462,8 @@
         }
         .service-card {
             background-color: var(--primaryColor);
-            border-radius: 5%;
+            /* border-radius: 5%; */
+            border-radius: 5% / 3%;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 40%;
             aspect-ratio: 1/0.8;
@@ -470,11 +483,13 @@
             width: 100%;
             aspect-ratio: 1/0.6;
             border-radius: 5% 5% 20% 0%;
+            border-bottom-right-radius: 15% 18%;
+
         }
         .service-card .service-name {
             color: white;
             /* padding: 7%; */
-            font-size: 230%;
+            font-size: 110%;
             padding-top: 1.5%;
             padding-left: 5%;
             padding-bottom: 9%;
