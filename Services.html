@@ -1,0 +1,593 @@
+<html>
+ <head>
+  <title>
+   Services
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    @media screen and (min-width: 1280px){
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            --primaryColor: #63DDFF;
+            --lightColor: #D7F4FC;
+            --darkColor: #27788E;
+
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+        
+
+        .main-content {
+            /* padding: 20px; */
+            margin-right: 0;
+            margin-top: 0;
+            padding: 0px;
+            
+        }
+        .main-content .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primaryColor);
+            /* border-radius: 10px; */
+            height: 3.3vw;
+            width: 100%;
+
+            position: fixed;
+            color: white;
+            background-color: var(--primaryColor);
+            left: 0px;
+            z-index: 20;
+            margin-left: 0%;
+            margin-right: 0%;
+            padding: 0.7%;
+            box-shadow: -2px 2px 5px rgba(7, 63, 88, 0.253);
+            top:0;
+
+        }
+        #logoContainer{
+            width: 12vw;
+            font-weight: 600;
+            font-size: 2.8vw;
+            display: flex;
+            gap: 3%;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #logoContainer img{
+            width: 4.5vw;
+        }
+
+        .main-content .header ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin-bottom: -5px;
+            margin-left: -5%;
+
+        }
+        .highlightedNavbar{
+            margin-right: 1vw;
+            background-color: var(--lightColor);
+            padding: 3%;
+            padding-top: 3.2%;
+            padding-bottom: 0.5%;
+            border-top-left-radius: 1vw;
+            border-top-right-radius: 1vw;
+        }
+        .invisibleNavbar{
+            margin-right: 1vw;
+            /* background-color: var(--lightColor); */
+            padding: 3%;
+            padding-top: 3.2%;
+            padding-bottom: 0.5%;
+            border-top-left-radius: 1vw;
+            border-top-right-radius: 1vw;
+            transition: background-color 0.3s;
+
+        }
+
+        .invisibleNavbar:hover{
+            
+            background-color: rgb(198, 239, 255);
+            transition: background-color 0.3s;
+            
+        }
+
+        .navbarMiniLineEnabled{
+            width: 100%;
+            height: 8%;
+            background-color: var(--primaryColor);
+        }
+
+        .main-content .header ul li a {
+            
+            font-weight: 400;
+            color: var(--darkColor);
+            text-decoration: none;
+            font-size: 1.5vw;
+        }
+        .main-content .header .menu-icon {
+            font-size: 24px;
+            transform: scale(1.4);
+            align-self: center;
+            cursor: pointer;
+            border-radius: 1000px;
+        }
+
+        #navbarSubContainer{
+            margin-right: -1.5%;
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            width: 10vw;
+            color: var(--darkColor);
+        }
+
+        #navbarSubContainer img{
+            border-radius: 50%;
+            width: 35%;
+            height: 35%;
+        }
+
+
+
+        .search-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            position: fixed;
+            top: 5.5vw;
+            right: 0;
+            z-index: 5;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 5px 10px;
+            border: none;
+            background-color: var(--darkColor);
+            color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+
+        }
+        .search-bar input[type="submit"]:hover{
+            background-color: #333;
+            transform: scale(1.1);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .content {
+            padding: 0px;
+            margin-top: 11vw;
+
+        }
+        .subHeadingContainer{
+            position:fixed;
+            background-color: var(--lightColor);
+            width: 100%;
+            padding: 0%;
+            margin-left: 0;
+            top: 4.7vw;
+            
+        }
+        .content h1 {
+            font-size: 200%;
+            color: #333;
+            display: block;
+            font-weight: 700;
+            background-color: var(--lightColor);
+            color: var(--darkColor);
+            padding: 1%;
+            margin: 0%;
+            
+        }
+        .services {
+            margin-top: 0%;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3%;
+        }
+        .service-card {
+            background-color: var(--primaryColor);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 20%;
+            aspect-ratio: 1/0.8;
+            /* text-align: center; */
+            padding: 0;
+            margin-bottom: 3%;
+            box-shadow: -2px 2px 5px rgba(7, 63, 88, 0.253);
+            cursor: pointer;
+            transition: transform 0.7s;
+
+        }
+        .service-card:hover{
+            transform: scale(1.07);
+            transition: transform 0.2s;
+        }
+        .service-card img {
+            width: 100%;
+            aspect-ratio: 1/0.6;
+            border-radius: 10px 10px 12% 0%;
+        }
+        .service-card .service-name {
+            color: white;
+            /* padding: 7%; */
+            font-size: 180%;
+            padding-top: 1.5%;
+            padding-left: 5%;
+            padding-bottom: 9%;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+    @media screen and (min-device-width: 0px) and (max-device-width: 768px){
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            --primaryColor: #63DDFF;
+            --lightColor: #D7F4FC;
+            --darkColor: #27788E;
+
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+        
+
+        .main-content {
+            margin-left: 0%;
+            /* padding: 20px; */
+            margin-right: 0;
+            padding: 0px;
+            margin: 0;
+            
+            
+        }
+        .main-content .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primaryColor);
+            /* border-radius: 10px; */
+            height: 8vw;
+            width: 100vw;
+
+            color: white;
+            background-color: var(--primaryColor);
+            left: 0px;
+            z-index: 20;
+            margin-left: 0%;
+            margin-right: 0%;
+            padding: 0.7%;
+            box-shadow: -2px 2px 5px rgba(7, 63, 88, 0.253);
+            position: fixed;
+            top: 0;
+        }
+        #logoContainer{
+            width: 10vw;
+            font-weight: 600;
+            font-size: 4vw;
+            display: flex;
+            gap: 3%;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #logoContainer img{
+            width: 8vw;
+        }
+
+        .main-content .header ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin-bottom: 0px;
+            margin-left: 2%;
+
+        }
+        .highlightedNavbar{
+            margin-right: 0.5vw;
+            background-color: var(--lightColor);
+            padding: 1.5%;
+            padding-top: 2.5%;
+            padding-bottom: 0.5%;
+            border-top-left-radius: 2vw;
+            border-top-right-radius: 2vw;
+        }
+        .invisibleNavbar{
+            margin-right: 0.5vw;
+            /* background-color: var(--lightColor); */
+            padding: 1.5%;
+            padding-top: 2.5%;
+            padding-bottom: 0.5%;
+            border-top-left-radius: 2vw;
+            border-top-right-radius: 2vw;
+            transition: background-color 0.3s;
+
+        }
+
+        .invisibleNavbar:hover{
+            
+            background-color: rgb(198, 239, 255);
+            transition: background-color 0.3s;
+            
+        }
+
+        .navbarMiniLineEnabled{
+            width: 100%;
+            height: 8%;
+            background-color: var(--primaryColor);
+        }
+
+        .main-content .header ul li a {
+            
+            font-weight: 400;
+            color: var(--darkColor);
+            text-decoration: none;
+            font-size: 3vw;
+        }
+        .main-content .header .menu-icon {
+            font-size: 24px;
+            transform: scale(1.4);
+            align-self: center;
+            cursor: pointer;
+            border-radius: 1000px;
+        }
+
+        #navbarSubContainer{
+            margin-right: 4%;
+            display: flex;
+            flex-direction: row;
+            gap: 20%;
+            width: 15vw;
+            color: var(--darkColor);
+        }
+        #navbarSubContainer i{
+            transform: scale(2);
+        }
+
+        #navbarSubContainer img{
+            border-radius: 50%;
+            width: 50%;
+            height: 50%;
+        }
+
+
+        .search-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            position: fixed;
+            top: 11vw;
+            right: 0;
+            z-index: 5;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 5px 10px;
+            border: none;
+            background-color: var(--darkColor);
+            color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+
+        }
+        .search-bar input[type="submit"]:hover{
+            background-color: #333;
+            transform: scale(1.1);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .content {
+            padding: 0px;
+            margin-top: 15vw;
+
+        }
+        .subHeadingContainer{
+            position:fixed;
+            background-color: var(--lightColor);
+            width: 100%;
+            padding: 0%;
+            margin-left: 0;
+            top: 10vw;
+            
+        }
+        .content h1 {
+            font-size: 200%;
+            color: #333;
+            display: block;
+            font-weight: 700;
+            background-color: var(--lightColor);
+            color: var(--darkColor);
+            padding: 1%;
+            margin: 0%;
+            
+        }
+        .services {
+            margin-top: 22vw;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10%;
+        }
+        .service-card {
+            background-color: var(--primaryColor);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 35%;
+            aspect-ratio: 1/0.8;
+            /* text-align: center; */
+            padding: 0;
+            margin-bottom: 5%;
+            box-shadow: -0.5rem 0.5rem 1rem rgba(7, 63, 88, 0.253);
+            cursor: pointer;
+            transition: transform 0.7s;
+
+        }
+        .service-card:hover{
+            transform: scale(1.07);
+            transition: transform 0.2s;
+        }
+        .service-card img {
+            width: 100%;
+            aspect-ratio: 1/0.6;
+            border-radius: 10px 10px 12% 0%;
+        }
+        .service-card .service-name {
+            color: white;
+            /* padding: 7%; */
+            font-size: 200%;
+            padding-top: 1.5%;
+            padding-left: 5%;
+            padding-bottom: 9%;
+            border-radius: 0 0 10px 10px;
+        }
+
+    }
+
+
+        
+
+  </style>
+ </head>
+ <body>
+    <div class="main-content">
+        <div class="header">
+         <div id="logoContainer">
+             <img src="Logo.png" alt="Logo">
+             4You
+         </div>
+         <ul>
+          <li class = "invisibleNavbar">
+           <a href="/demo_web/index.html">
+            Home
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li>
+          <li class = "highlightedNavbar">
+           <a href="#">
+            Services
+           </a>
+           <div class="navbarMiniLineEnabled"></div>
+          </li>
+          <li class = "invisibleNavbar">
+           <a href="#">
+            About&nbsp;Us
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li>
+          <li class = "invisibleNavbar">
+           <a href="#">
+            Discussions
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li>
+         </ul>
+         <div id="navbarSubContainer">
+             <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50"/>
+             <div class="menu-icon">
+             <i class="fas fa-bars">
+             </i>
+             </div>
+         </div>
+        </div>
+
+  <div class="content">
+    <div class="search-bar">
+        <input placeholder="Search" type="text"/>
+        <input type="submit" value="Search"/>
+    </div>
+    <div class="subHeadingContainer">
+   <h1>
+    What's On Your Mind?
+   </h1>
+    </div>
+   <div class="services">
+    <div class="service-card">
+     <img alt="Plumbing service image"  src="https://storage.googleapis.com/a1aa/image/De7iCXWC1oUVCK6t0dCiXBUsgUZZegziHIiZiU0MpcvePTonA.jpg" width="200"/>
+     <div class="service-name">
+      Plumber
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Plumbing service image"  src="https://storage.googleapis.com/a1aa/image/De7iCXWC1oUVCK6t0dCiXBUsgUZZegziHIiZiU0MpcvePTonA.jpg" width="200"/>
+     <div class="service-name">
+      Appliance Repair
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Carpentry service image"  src="https://storage.googleapis.com/a1aa/image/lYr2ZPv1GYrtBtigMg1F4efyGBmyeyx0peTOQDxkyRf6fZC9E.jpg" width="200"/>
+     <div class="service-name">
+      Carpentry
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Nanny service image"  src="https://storage.googleapis.com/a1aa/image/2PXDuDLUl8qfNaZRp7xpOsfpaXbyJLL7eoncergn6YxGgmQPB.jpg" width="200"/>
+     <div class="service-name">
+      Nanny
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Babysitter service image"  src="https://storage.googleapis.com/a1aa/image/mrvdfEeuJ2pgc0me9YMh3Cc0fbLpi0YD38O7XnO3enOdANheE.jpg" width="200"/>
+     <div class="service-name">
+      Beauty & Spa
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Babysitter service image"  src="https://storage.googleapis.com/a1aa/image/mrvdfEeuJ2pgc0me9YMh3Cc0fbLpi0YD38O7XnO3enOdANheE.jpg" width="200"/>
+     <div class="service-name">
+      Babysitter
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Cook service image"  src="https://storage.googleapis.com/a1aa/image/qjNfH1YX4D3qby2FzogjLzHivXvnKsZBho52SxMf9XXEoJ0TA.jpg" width="200"/>
+     <div class="service-name">
+      Cook
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Maid service image"  src="https://storage.googleapis.com/a1aa/image/jwRQfo6TrYQf800fLy4HkKqxwfFE1jrCSofUidjbO3SvANheE.jpg" width="200"/>
+     <div class="service-name">
+      Maid
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
