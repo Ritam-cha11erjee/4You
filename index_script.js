@@ -2,9 +2,14 @@
  let element = document.querySelectorAll(".SSimage");
  let prev = document.getElementById("prev");
  let next = document.getElementById("next");
+ let dropdown = document.querySelector(".dropdown");
+let bars = document.querySelector(".fas");
 let counter = 0;
 let maxSlides = 4;
 let intervalID;
+
+let dropdownToggle = false;
+
 
 
 let sidebarOpener = document.querySelector(".sidebarOpener");
@@ -69,3 +74,18 @@ function initiateSlideshow(){
     
  })
  
+ bars.addEventListener("click", () => {
+
+    if(!dropdownToggle){
+    // dropdown.style.display = "block";
+    dropdownToggle = true;
+
+    dropdown.style.transform = "scale(1)"
+    }
+
+    else{
+        dropdownToggle = false;
+
+        dropdown.style.transform = "scale(0)"
+    }
+})
