@@ -4,6 +4,13 @@
  let next = document.getElementById("next");
  let dropdown = document.querySelector(".dropdown");
 let bars = document.querySelector(".fas");
+let signUpPic = document.querySelector(".signUpPic");
+let signUp = document.querySelector(".signUp");
+let x = document.querySelectorAll(".x");
+let loginBtn = document.querySelector("#loginBtn");
+let login = document.querySelector(".login");
+let signUpBtn = document.querySelector("#signUpBtn");
+
 let counter = 0;
 let maxSlides = 4;
 let intervalID;
@@ -73,6 +80,34 @@ function initiateSlideshow(){
     }
     
  })
+ 
+
+
+ signUpPic.addEventListener("click", () => {
+
+    signUp.style.display = "block";
+ })
+
+ x.forEach(element => element.addEventListener("click", () => {
+
+    signUp.style.display = "none";
+    login.style.display = "none";
+
+ }));
+
+ loginBtn.addEventListener("click", () => {
+
+    signUp.style.display = "none";
+    login.style.display = "block";
+ })
+
+ signUpBtn.addEventListener("click", () => {
+
+    signUp.style.display = "block";
+    login.style.display = "none";
+ })
+
+
  
  bars.addEventListener("click", () => {
 
