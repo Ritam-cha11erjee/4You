@@ -157,6 +157,25 @@ var serviceProviders = [
 
 
   
+bars.addEventListener("click", () => {
+
+  if(!dropdownToggle){
+  // dropdown.style.display = "block";
+  dropdownToggle = true;
+
+  dropdown.style.transform = "scale(1)"
+  }
+
+  else{
+      dropdownToggle = false;
+
+      dropdown.style.transform = "scale(0)"
+  }
+})
+
+
+
+  
 
   // function openNav() {
   //   document.getElementById("mySidenav").style.display = "block";
