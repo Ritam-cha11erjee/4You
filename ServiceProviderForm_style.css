@@ -1,4 +1,4 @@
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 601px){
 
     .fas{
         user-select: none;
@@ -579,7 +579,7 @@
 
 
 
-@media screen and (min-device-width: 0px) and (max-device-width: 768px){
+@media screen and (min-device-width: 0px) and (max-device-width: 600px){
 
 
     .fas{

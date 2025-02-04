@@ -9,7 +9,9 @@
 
 let sidebarOpener = document.querySelector(".sidebarOpener");
 let sidebar = document.querySelector("#theSidebar");
-
+let dropdown = document.querySelector(".dropdown");
+let bars = document.querySelector(".fas");
+let dropdownToggle = false;
 
 let sidebarToggleCounter = 0;
 sidebarOpener.addEventListener("click", () => {
@@ -30,4 +32,20 @@ sidebarOpener.addEventListener("click", () => {
 
    }
    
+})
+
+bars.addEventListener("click", () => {
+
+    if(!dropdownToggle){
+    // dropdown.style.display = "block";
+    dropdownToggle = true;
+
+    dropdown.style.transform = "scale(1)"
+    }
+
+    else{
+        dropdownToggle = false;
+
+        dropdown.style.transform = "scale(0)"
+    }
 })

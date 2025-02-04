@@ -6,6 +6,11 @@ let Beauty_Spa = document.querySelector("#Beauty_Spa");
 let Babysitter = document.querySelector("#Babysitter");
 let Cook = document.querySelector("#Cook");
 let Maid = document.querySelector("#Maid");
+let dropdown = document.querySelector(".dropdown");
+let bars = document.querySelector(".fas");
+let dropdownToggle = false;
+
+
 
 Plumber.addEventListener("click", () => {
 sessionStorage.setItem('nameString', "Plumber");
@@ -45,4 +50,21 @@ Cook.addEventListener("click", () => {
 Maid.addEventListener("click", () => {
     sessionStorage.setItem('nameString', "Maid");
     window.location.href = "/4You/workplace.html";
+})
+
+
+bars.addEventListener("click", () => {
+
+    if(!dropdownToggle){
+    // dropdown.style.display = "block";
+    dropdownToggle = true;
+
+    dropdown.style.transform = "scale(1)"
+    }
+
+    else{
+        dropdownToggle = false;
+
+        dropdown.style.transform = "scale(0)"
+    }
 })
